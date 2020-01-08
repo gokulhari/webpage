@@ -3,7 +3,7 @@ HDOCS=$(addsuffix .html, $(DOCS))
 PHDOCS=$(addprefix html/, $(HDOCS))
 
 .PHONY : docs
-docs : $(PHDOCS)
+docs : $(HDOCS)
 
 .PHONY : update
 update : $(PHDOCS)
@@ -11,10 +11,10 @@ update : $(PHDOCS)
 	# insert code for copying to server here.
 	@echo ' done.'
 
-html/%.html : jemdocs/%.jemdoc MENU
-	python2.7 jemdoc.py -c bibover.conf -o $@ $<  && cp  -a eqs/. html/eqs
+%.html : jemdocs/%.jemdoc MENU
+	python2.7 jemdoc.py -c bibover.conf -o $@ $< 
 
 .PHONY : clean
 clean :
-	-rm -f html/*.html
+	-rm -f *.html
 
