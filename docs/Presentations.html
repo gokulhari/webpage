@@ -1,14 +1,13 @@
-#/*
-# * Jemdoc configuration file for the bibover extension
-# * Based on Truong X. Nghiem’s JabRef export filter.
-# *
-# * Author: Jacob D. Grunnet, grunnet@es.aau.dk
-# *
-# */
-#
-[bodystart]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title></title>
 <script type="text/javascript" src="bibover.js">
-</script> 
+</script>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -21,8 +20,13 @@ MathJax.Hub.Config({
 <!-- End MathJax -->
 </head>
 <body>
-
-[bodyend]
+<div id="layout-content">
+<div id="footer">
+<div id="footer-text">
+Page generated 2020-05-09 14:28:28 CDT, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</div>
 <script type="text/javascript">
 <!--
 //Get array of all anchors in the layout-content table cell
@@ -34,10 +38,10 @@ var patt1 = /javascript:cite\(\'.*\'\)/;
 for(var	i=0;i<anchs.length;i++) {
     a=anchs[i];
     //If the anchor contains a cite add event listeners
-    if(a.href.search(patt1)!=-1) { 
+    if(a.href.search(patt1)!=-1) {
        a.addEventListener('mouseover',bibshow,false);
        a.addEventListener('mouseout',bibhide,false);
-    }      
+    }
 }
 -->
 </script>

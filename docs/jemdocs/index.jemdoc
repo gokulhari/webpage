@@ -1,23 +1,27 @@
-# jemdoc: menu{MENU}{index.html},addpackage{amsmath},addpackage{amssymb}
+# jemdoc: menu{MENU}{index.html},addpackage{amssymb},addpackage{mathrsfs},addpackage{amsmath}
 # jemdoc: addcss{jemdoc.css}
+# jemdoc: addcss{bibover.css}
+#include{masterFile_2.jeminc}
+#include{mj-complete-bib_3.jeminc}
 \n
   
-= Gokul Hariharan 
+= Gokul Hariharan, Ph.D. 
 
 
 
 ~~~
-{}{img_left}{ME.png}{alt text}{160}{160}{}
-*Ph.D Candidate*\n
-Department of Chemical Engineering and Materials Science\n
-University of Minnesota, Twin Cities
-~~~
-*Matlab Files*
-	\n
-	
-	+[http://github.com/gokulhari/webpage/zipball/master/  Download all Matlab files]+
+{}{img_left}{ME.png}{alt text}{200}{200}{}
+*Postdoctoral scholar*\n
+Ming Hseih Department of Electrical and Computer Engineering\n
+University of Southern California\n
+\n
+Email: [gokulhar@usc.edu gokulhar@usc.edu] \n 
+URL  :   [https://gokulhari.github.io/webpage/ gokulhari.github.io\/webpage\/]
+\n
 ~~~
 
+== About me 
+I have rich experience encompassing fluid mechanics, linear and nonlinear systems theory, control theory, matrix theory, distributed systems analysis, computational fluid dynamics (CFD), discrete element modeling (DEM), principle component analysis (PCA), model reduction, and artificial neural networks (ANN).  I am proficient in finite element, finite volume, finite difference, and spectral methods. I am looking for opportunities to lead, innovate, and manage modeling and simulation in industrial and scientific pursuits. 
 
 
 

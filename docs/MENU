@@ -1,13 +1,16 @@
 Gokul
 	Home            [index.html]
-	Interests  [../latex/tex/SISMatlab_v7.pdf]
-    CV		[cv.pdf]
+	LinkedIn  [\https://www.linkedin.com/in/gokulhariharan/]
+    Resume		[\Resume/Resume-Gokul-Hariharan.pdf]
 
 
 
 Research
-	Papers	 [reaction-diffusion.html]
-	Presentations [VariableCoef.html]
+	Papers	 [Papers.html]
+	Presentations [Presentations.html]
 
 Software
-	SISMatlab  [SISMatlab.html]
+	SISMatlab  [\https://gokulhari.github.io/SISMatlab/]
+	SVDFR3 [\https://gokulhari.github.io/svdfr3/ ]
+	SISCPP [\https://gokulhari.github.io/SISCpp/ ]
+	AdjointFinder [AdjointFinder.html]
