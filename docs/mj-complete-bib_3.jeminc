@@ -1,3 +1,33 @@
+
+#item: harkumjovPRF20
+~~~
+{}{raw}
+<div class="bibover noshow" id="bibover_harkumjovPRF20" onmousedown="javascript:lockMouse(event,'harkumjovPRF20')" onmouseup="javascript:unLockMouse(event,'harkumjovPRF20')"
+style="z-index: 10000">
+<div class="cross" style="z-index: 10000"><a href="javascript:closeCite('harkumjovPRF20')">X</a></div>
+<p>
+~~~
+
+/Well-conditioned ultraspherical and spectral integration methods for resolvent analysis of channel flows of Newtonian and viscoelastic fluids/\n
+Hariharan, G., Kumar, S. and Jovanović, M.R.\n
+Phys. Rev. Fluids, 2020\n
+[/javascript:toggleBibtex('harkumjovPRF20') \[BibTeX\]]
+~~~
+{}{raw}
+</p>
+<div id="bib_harkumjovPRF20" class="bibtex noshow" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
+<pre>
+@article{harkumjovPRF20,
+  author = {G. Hariharan and S. Kumar and M. R. Jovanovi&cacute;},
+  title = {Well-conditioned ultraspherical and spectral integration methods for  resolvent analysis of channel flows of Newtonian and viscoelastic fluids},
+  journal = {Phys. Rev. Fluids},
+  year = {2020},
+  note = {submitted}
+}
+</pre></div>
+</div>
+~~~
+
 #item: annseijovCDC16
 ~~~
 {}{raw}

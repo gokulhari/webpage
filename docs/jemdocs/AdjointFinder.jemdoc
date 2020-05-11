@@ -1,0 +1,91 @@
+# jemdoc: menu{MENU}{AdjointFinder.html},addpackage{amssymb},addpackage{mathrsfs},addpackage{amsmath}
+# jemdoc: addcss{jemdoc.css}
+# jemdoc: addcss{bibover.css}
+#include{masterFile_2.jeminc}
+#include{mj-complete-bib_3.jeminc}
+
+= Adjoint Finder
+
++AdjointFinder+ is a [https://www.wolfram.com/mathematica/ Mathematica] package to compute analytical expressions to adjoint operators and boundary conditions of differential equations with respect to the $L^2 [a, b]$ inner product. I developed and used this package to understand adjoints of descriptor systems in our [/javascript:cite('harkumjovPRF20') paper]. +AdjointFinder+ is likely to ease deriving analytical expressions to adjoints and adjoint boundary conditions without having to manually integrate-by-parts for large systems of differential equations with non-constant coefficients.
+
+This package is distributed under terms of GPL-$3$ license.
+
+=== Adjoint Finder
+~~~
+    {}{table}{}
+    +[Mathematica/AdjointFinder.wl AdjointFinder.wl]+    | --- | Download the package ||
+~~~
+
+=== Example Code
+Compute the adjoint of 
+\(
+v''(y) + (2 y^2 + 1)\,v'(y) + v(y) \;=\; 0     
+\)
+with boundary conditions,
+\(
+    \begin{align}
+2\, v(-1) \,+\, 3\, [v'(\cdot )](-1) \;&=\; 0,\\   
+4\, v(+1) \,+\, 5\, [v'(\cdot )](+1) \;&=\; 0,   
+    \end{align}
+\)
+where the prime denotes a derivative with respect to $y$.
+
+To use +AdjointFinder+, first load the package in your [https://www.wolfram.com/mathematica/ Mathematica] notebook
+~~~
+{Load the package}{}
+Once[Get["~/Desktop/AdjointFinder.wl"]]
+~~~
+Note that the above script assumes that the package is placed on your Desktop. If not, specify the path to where +AdjointFinder+ is located.
+
+After that, computing the adjoint is straightforward. The function +Adjoint+ in +AdjointFinder+ calculates the adjoint and adjoint boundary conditions. The inputs needed for this function are: $(1)$ the equations, $(2)$ the left and $(3)$ right boundary conditions, $(4)$ the independent variable and domain end points, $(5)$ list of dependent variables and the order of the differential system. 
+~~~
+{Compute and print the adjoint system}{}
+eq1 = v''[y] + (2 y^2 + 1) v'[y] + v[y];
+{eqAd, eqBc} = 
+  Adjoint[{eq1}, {2 v[-1] + 3 v'[-1]} , {4 v[1] + 5 v'[1]}, {y, -1, 1}, {v, 2}];
+Print["Adjoint Equations: "]
+Print[eqAd]
+Print["Adjoint Boudary conditions: "]
+Print[eqBc]
+~~~
+This generates the output:
+~~~
+{Output}{}
+Adjoint Equations: 
+{(1-4 y) v[y]+(-1-2 y^2) v'[y]+v''[y]}
+Adjoint Boudary conditions: 
+{-7 v[-1]+3 v'[-1],-11 v[1]+5 v'[1]}
+~~~
+=== Description of examples
+~~~
+{}{table}{}
++[Mathematica/Ex1.nb Ex1.nb]+ | --- | A simple example to calculate the adjoint of a differential equation with mixed boundary conditions ||
++[Mathematica/Ex2.nb  Ex2.nb]+ | --- | An example to compute the adjoint of the Navier-Stokes equations in the evolution form||
++[Mathematica/Ex3.nb Ex3.nb]+ | --- | An example to compute the adjoint of the Navier-Stokes equations in the  descriptor form||
+| | ||
+~~~
+
+=== Citation
+
+If you use +AdjointFinder+ in your research or teaching, please include
+explicit mention of this website
+	\n
+	\n ~ ~ ~ ~
+[https://gokulhari.github.io/webpage/AdjointFinder.html gokulhari.github.io\/webpage\/AdjointFinder.html] 
+	\n
+	\n
+and of our [/javascript:cite('harkumjovPRF20') paper].
+	\n
+	\n
+~~~ 
+{}{} 
+@article{harkumjovPRF20,
+author  = {G. Hariharan and S. Kumar and M. R. Jovanovi\'c},
+title   = {Well-conditioned ultraspherical and spectral integration methods for 
+resolvent analysis of channel flows of Newtonian and viscoelastic fluids},
+journal = {Phys. Rev. Fluids},
+year    = {2020},
+note    = {submitted}
+}
+~~~
+

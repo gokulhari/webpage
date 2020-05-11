@@ -1,4 +1,4 @@
-DOCS=index Papers Presentations
+DOCS=index Papers Presentations AdjointFinder
 HDOCS=$(addsuffix .html, $(DOCS))
 PHDOCS=$(addprefix html/, $(HDOCS))
 
