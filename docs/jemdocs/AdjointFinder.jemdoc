@@ -13,7 +13,8 @@ This package is distributed under terms of GPL-$3$ license.
 === Adjoint Finder
 ~~~
     {}{table}{}
-    +[Mathematica/AdjointFinder.wl AdjointFinder.wl]+    | --- | Download the package ||
+	+[Mathematica/AdjointFinder.wl AdjointFinder.wl]+    | --- | Download the package ||
+	+[AdjointFinder.zip AdjointFinder.zip]+    | --- | Download the package with examples ||
 ~~~
 
 === Example Code
@@ -59,9 +60,9 @@ Adjoint Boudary conditions:
 === Description of examples
 ~~~
 {}{table}{}
-+[Mathematica/Ex1.nb Ex1.nb]+ | --- | A simple example to calculate the adjoint of a differential equation with mixed boundary conditions ||
-+[Mathematica/Ex2.nb  Ex2.nb]+ | --- | An example to compute the adjoint of the Navier-Stokes equations in the evolution form||
-+[Mathematica/Ex3.nb Ex3.nb]+ | --- | An example to compute the adjoint of the Navier-Stokes equations in the  descriptor form||
++[Mathematica/Ex1.nb Ex1.nb]+ | --- | a simple example that calculates the adjoint of a differential equation with mixed boundary conditions ||
++[Mathematica/Ex2.nb  Ex2.nb]+ | --- | an example that computes the adjoint of the Navier-Stokes equations in the evolution form||
++[Mathematica/Ex3.nb Ex3.nb]+ | --- | an example that computes the adjoint of the Navier-Stokes equations in the  descriptor form||
 | | ||
 ~~~
 

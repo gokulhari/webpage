@@ -1,0 +1,584 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23170,        576]
+NotebookOptionsPosition[     22018,        549]
+NotebookOutlinePosition[     22355,        564]
+CellTagsIndexPosition[     22312,        561]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{"AdjointFinder", ":", " ", 
+      RowBox[{
+      "If", " ", "you", " ", "use", " ", "this", " ", "in", " ", "your", " ", 
+       "research", " ", "or", " ", "teaching"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"please", " ", "cite", " ", "the", " ", 
+       RowBox[{"webpage", ":", " ", "\[IndentingNewLine]", "https", ":"}]}], "//", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"gokulhari", ".", "github", ".", "io"}], "/", "webpage"}], 
+        "/", 
+        RowBox[{"AdjointFinder", ".", "html"}]}], "\[IndentingNewLine]", 
+       "and", " ", "the", " ", 
+       RowBox[{"paper", ":", "\[IndentingNewLine]", 
+        RowBox[{"G", ".", "Hariharan"}]}]}]}], ",", " ", 
+     RowBox[{"S", ".", "Kumar"}], ",", " ", 
+     RowBox[{"and", " ", 
+      RowBox[{"M", ".", "R", ".", "Jovanovic"}]}], ",", " ", 
+     RowBox[{"Well", "-", 
+      RowBox[{
+      "conditioned", " ", "ultraspherical", " ", "and", " ", "spectral", " ", 
+       "integration", " ", "methods", " ", "for", " ", "resolvent", " ", 
+       "analysis", " ", "of", " ", "channel", " ", "flows", " ", "of", " ", 
+       "Newtonian", " ", "and", " ", "viscoelastic", " ", "fluids"}]}], ",", 
+     " ", 
+     RowBox[{"Phys", ".", "Rev", ".", "Fluids"}], ",", " ", "2020", ",", " ", 
+     
+     RowBox[{"note", ":", "Submitted"}]}], "}"}], "\[IndentingNewLine]", 
+   "Written", " ", "by", " ", "Gokul", " ", "Hariharan", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"harih020", "@", "umn"}], ".", "edu"}], ")"}]}], 
+  "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.7981316334823017`*^9, 3.798131657831048*^9}, {
+  3.798132060577553*^9, 3.798132126590876*^9}, {3.798132508595687*^9, 
+  3.79813252074763*^9}, {3.798133263483725*^9, 3.7981332849173403`*^9}, {
+  3.798134069326912*^9, 3.79813410563951*^9}, {3.798134392620832*^9, 
+  3.7981345537903423`*^9}, {3.79813463749052*^9, 
+  3.7981346667079487`*^9}},ExpressionUUID->"046af54e-bba3-482e-8974-\
+300adb272d4a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Once", "[", 
+   RowBox[{"Get", "[", "\"\<~/Desktop/AdjointFinder.wl\>\"", "]"}], "]"}], 
+  " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Call", " ", "this", " ", "once"}], ",", " ", 
+    RowBox[{
+    "adjust", " ", "this", " ", "based", " ", "on", " ", "where", " ", "you", 
+     " ", "store", " ", "the", " ", "pack"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Call", " ", 
+    RowBox[{"Clear", "[", "AdjointFinder`", "]"}], " ", "to", " ", "clear", 
+    " ", "all", " ", "functions", " ", "in", " ", "this", " ", "context"}], 
+   " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"?", "Adjoint"}]}], "Input",
+ CellChangeTimes->{{3.7981316334823017`*^9, 3.798131657831048*^9}, {
+  3.798132060577553*^9, 3.798132126590876*^9}, {3.798132508595687*^9, 
+  3.79813252074763*^9}, {3.798133263483725*^9, 3.7981332849173403`*^9}, {
+  3.798134069326912*^9, 3.79813410563951*^9}, {3.798134392620832*^9, 
+  3.7981345537903423`*^9}, {3.79813463749052*^9, 3.798134648204466*^9}, {
+  3.79813526518118*^9, 3.798135282390745*^9}, {3.798141888955715*^9, 
+  3.7981419091440973`*^9}},
+ CellLabel->
+  "In[128]:=",ExpressionUUID->"806896a0-6f88-47ec-882c-7f8d6b4389c1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"This function computes adjoints and adjoint \
+boundary conditions wrt. L2[a,b] inner\\nproduct. {eqns_ad,bc_ad} = \
+Adjoints[eqns,lbc,rbc,{y,a,b},{vars, order}]. Inputs are the differential \
+equations, \\nthe left boundary conditions, the right boundary conditions, \
+and independent variable with domain y \[Element] [a,b], and the list of \
+\\ndependent variables, and the overall order of the differential \
+system.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Definitions\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Definitions", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{
+                    RowBox[{"Adjoint", "[", 
+                    RowBox[{
+                    "AdjointFinder`Private`eqns_", ",", 
+                    "AdjointFinder`Private`lbc_", ",", 
+                    "AdjointFinder`Private`rbc_", ",", 
+                    "AdjointFinder`Private`var_", ",", 
+                    "AdjointFinder`Private`invar_"}], "]"}], ":=", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"ComputeAd", "[", 
+                    RowBox[{
+                    "AdjointFinder`Private`eqns", ",", 
+                    "AdjointFinder`Private`var", ",", 
+                    "AdjointFinder`Private`invar"}], "]"}], ",", 
+                    RowBox[{"Computebc", "[", 
+                    RowBox[{
+                    "AdjointFinder`Private`eqns", ",", 
+                    "AdjointFinder`Private`lbc", ",", 
+                    "AdjointFinder`Private`rbc", ",", 
+                    "AdjointFinder`Private`var", ",", 
+                    "AdjointFinder`Private`invar"}], "]"}]}], "}"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"AdjointFinder`Adjoint\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"This function computes adjoints and adjoint \
+boundary conditions wrt. L2[a,b] inner\\nproduct. {eqns_ad,bc_ad} = \
+Adjoints[eqns,lbc,rbc,{y,a,b},{vars, order}]. Inputs are the differential \
+equations, \\nthe left boundary conditions, the right boundary conditions, \
+and independent variable with domain y \[Element] [a,b], and the list of \
+\\ndependent variables, and the overall order of the differential \
+system.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "This function computes adjoints and adjoint boundary conditions wrt. \
+L2[a,b] inner\nproduct. {eqns_ad,bc_ad} = \
+Adjoints[eqns,lbc,rbc,{y,a,b},{vars, order}]. Inputs are the differential \
+equations, \nthe left boundary conditions, the right boundary conditions, and \
+independent variable with domain y \[Element] [a,b], and the list of \n\
+dependent variables, and the overall order of the differential system.", 
+    "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
+    "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, AdjointFinder`Adjoint, {AdjointFinder`Adjoint[
+         Pattern[AdjointFinder`Private`eqns, 
+          Blank[]], 
+         Pattern[AdjointFinder`Private`lbc, 
+          Blank[]], 
+         Pattern[AdjointFinder`Private`rbc, 
+          Blank[]], 
+         Pattern[AdjointFinder`Private`var, 
+          Blank[]], 
+         Pattern[AdjointFinder`Private`invar, 
+          Blank[]]] :> {
+         AdjointFinder`ComputeAd[
+         AdjointFinder`Private`eqns, AdjointFinder`Private`var, 
+          AdjointFinder`Private`invar], 
+         AdjointFinder`Computebc[
+         AdjointFinder`Private`eqns, AdjointFinder`Private`lbc, 
+          AdjointFinder`Private`rbc, AdjointFinder`Private`var, 
+          AdjointFinder`Private`invar]}}], "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "AdjointFinder`Adjoint"], False]]], "Output",
+ CellChangeTimes->{3.798141909880406*^9, 3.798143336985837*^9, 
+  3.798143790257721*^9},
+ CellLabel->
+  "Out[129]=",ExpressionUUID->"6ed5f85a-77a3-45b3-835e-1fe5f720129c"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7981419042825203`*^9, 
+  3.798141904296742*^9}},ExpressionUUID->"4f2234a4-f810-4d24-9890-\
+7405778e29ee"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Define", " ", "the", " ", "equations", " ", "for", " ", "a", " ", 
+    "simple", " ", "differential", " ", "equation", " ", "with", " ", "mixed",
+     " ", "boundary", " ", "conditions"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"eq1", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"v", "''"}], "[", "y", "]"}], " ", "+", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", 
+          SuperscriptBox["y", "2"]}], "+", "1"}], ")"}], 
+       RowBox[{
+        RowBox[{"v", "'"}], "[", "y", "]"}]}], "+", " ", 
+      RowBox[{"v", "[", "y", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"eqAd", ",", "eqBc"}], "}"}], " ", "=", " ", 
+     RowBox[{"Adjoint", "[", 
+      RowBox[{
+       RowBox[{"{", "eq1", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          RowBox[{"v", "[", 
+           RowBox[{"-", "1"}], "]"}]}], "+", " ", 
+         RowBox[{"3", 
+          RowBox[{
+           RowBox[{"v", "'"}], "[", 
+           RowBox[{"-", "1"}], "]"}]}]}], "}"}], " ", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"4", " ", 
+          RowBox[{"v", "[", "1", "]"}]}], " ", "+", " ", 
+         RowBox[{"5", " ", 
+          RowBox[{
+           RowBox[{"v", "'"}], "[", "1", "]"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", 
+         RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"v", ",", "2"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "\"\<Adjoint Equations: \>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "eqAd", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "\"\<Adjoint Boudary conditions: \>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", "eqBc", "]"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.7981325432527514`*^9, {3.798133323706108*^9, 3.7981333498057957`*^9}, {
+   3.798133975322981*^9, 3.798134002845327*^9}, {3.798134152866911*^9, 
+   3.798134212684929*^9}, {3.798134247895917*^9, 3.798134248107321*^9}, {
+   3.798135480653802*^9, 3.798135550900352*^9}, {3.7981395044230013`*^9, 
+   3.798139709872425*^9}, {3.798139878217835*^9, 3.7981399630372562`*^9}, {
+   3.798140177628676*^9, 3.7981402177809668`*^9}, {3.7981417660439053`*^9, 
+   3.798141877077264*^9}, {3.798141975886178*^9, 3.798141981489699*^9}, {
+   3.798142032554158*^9, 3.798142034192766*^9}, {3.798142106602806*^9, 
+   3.798142116448752*^9}, {3.798142281909787*^9, 3.798142332884851*^9}, {
+   3.798143843996179*^9, 
+   3.798143871049561*^9}},ExpressionUUID->"76ed8d8a-5607-4435-b87c-\
+6713e3f9a660"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Adjoint Equations: \"\>"], "Print",
+ CellChangeTimes->{
+  3.798139966492216*^9, 3.7981419215461683`*^9, 3.7981419833557577`*^9, 
+   3.79814201888937*^9, 3.798142057797089*^9, 3.798142117338337*^9, {
+   3.7981422417685003`*^9, 3.798142250469413*^9}, 3.7981422982406387`*^9, 
+   3.798142334447616*^9, 3.7981424909158993`*^9, {3.798143080151675*^9, 
+   3.798143102931902*^9}, 3.798143341414321*^9, 3.798143793022715*^9},
+ CellLabel->
+  "During evaluation of \
+In[130]:=",ExpressionUUID->"9e7bac03-47bf-456c-b7f4-8f2131da21cf"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"4", " ", "y"}]}], ")"}], " ", 
+    RowBox[{"v", "[", "y", "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "-", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["y", "2"]}]}], ")"}], " ", 
+    RowBox[{
+     SuperscriptBox["v", "\[Prime]",
+      MultilineFunction->None], "[", "y", "]"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["v", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "y", "]"}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.798139966492216*^9, 3.7981419215461683`*^9, 3.7981419833557577`*^9, 
+   3.79814201888937*^9, 3.798142057797089*^9, 3.798142117338337*^9, {
+   3.7981422417685003`*^9, 3.798142250469413*^9}, 3.7981422982406387`*^9, 
+   3.798142334447616*^9, 3.7981424909158993`*^9, {3.798143080151675*^9, 
+   3.798143102931902*^9}, 3.798143341414321*^9, 3.798143793025196*^9},
+ CellLabel->
+  "During evaluation of \
+In[130]:=",ExpressionUUID->"e9c0cac6-ab49-4b29-b02a-c43c106f7a3c"],
+
+Cell[BoxData["\<\"Adjoint Boudary conditions: \"\>"], "Print",
+ CellChangeTimes->{
+  3.798139966492216*^9, 3.7981419215461683`*^9, 3.7981419833557577`*^9, 
+   3.79814201888937*^9, 3.798142057797089*^9, 3.798142117338337*^9, {
+   3.7981422417685003`*^9, 3.798142250469413*^9}, 3.7981422982406387`*^9, 
+   3.798142334447616*^9, 3.7981424909158993`*^9, {3.798143080151675*^9, 
+   3.798143102931902*^9}, 3.798143341414321*^9, 3.7981437930283937`*^9},
+ CellLabel->
+  "During evaluation of \
+In[130]:=",ExpressionUUID->"2cdf31b0-3b6c-4c57-b452-8eb6f397cedc"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "7"}], " ", 
+     RowBox[{"v", "[", 
+      RowBox[{"-", "1"}], "]"}]}], "+", 
+    RowBox[{"3", " ", 
+     RowBox[{
+      SuperscriptBox["v", "\[Prime]",
+       MultilineFunction->None], "[", 
+      RowBox[{"-", "1"}], "]"}]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "11"}], " ", 
+     RowBox[{"v", "[", "1", "]"}]}], "+", 
+    RowBox[{"5", " ", 
+     RowBox[{
+      SuperscriptBox["v", "\[Prime]",
+       MultilineFunction->None], "[", "1", "]"}]}]}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.798139966492216*^9, 3.7981419215461683`*^9, 3.7981419833557577`*^9, 
+   3.79814201888937*^9, 3.798142057797089*^9, 3.798142117338337*^9, {
+   3.7981422417685003`*^9, 3.798142250469413*^9}, 3.7981422982406387`*^9, 
+   3.798142334447616*^9, 3.7981424909158993`*^9, {3.798143080151675*^9, 
+   3.798143102931902*^9}, 3.798143341414321*^9, 3.798143793031447*^9},
+ CellLabel->
+  "During evaluation of \
+In[130]:=",ExpressionUUID->"79a6e298-af1a-47f5-a1a7-c149c1be2e96"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 623},
+WindowMargins->{{75, Automatic}, {39, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2047, 45, 220, "Input",ExpressionUUID->"046af54e-bba3-482e-8974-300adb272d4a"],
+Cell[CellGroupData[{
+Cell[2630, 69, 1225, 26, 94, "Input",ExpressionUUID->"806896a0-6f88-47ec-882c-7f8d6b4389c1"],
+Cell[3858, 97, 11968, 285, 225, "Output",ExpressionUUID->"6ed5f85a-77a3-45b3-835e-1fe5f720129c"]
+}, Open  ]],
+Cell[15841, 385, 154, 3, 30, "Input",ExpressionUUID->"4f2234a4-f810-4d24-9890-7405778e29ee"],
+Cell[CellGroupData[{
+Cell[16020, 392, 2740, 68, 201, "Input",ExpressionUUID->"76ed8d8a-5607-4435-b87c-6713e3f9a660"],
+Cell[CellGroupData[{
+Cell[18785, 464, 541, 9, 24, "Print",ExpressionUUID->"9e7bac03-47bf-456c-b7f4-8f2131da21cf"],
+Cell[19329, 475, 1050, 28, 27, "Print",ExpressionUUID->"e9c0cac6-ab49-4b29-b02a-c43c106f7a3c"],
+Cell[20382, 505, 552, 9, 24, "Print",ExpressionUUID->"2cdf31b0-3b6c-4c57-b452-8eb6f397cedc"],
+Cell[20937, 516, 1053, 29, 27, "Print",ExpressionUUID->"79a6e298-af1a-47f5-a1a7-c149c1be2e96"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
