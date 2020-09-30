@@ -80,11 +80,11 @@ and of our [/javascript:cite('harkumjovPRF20') paper].
 	\n
 ~~~ 
 {}{} 
-@article{harkumjovPRF20,
+@article{harkumjovJCP20,
 author  = {G. Hariharan and S. Kumar and M. R. Jovanovi\'c},
 title   = {Well-conditioned ultraspherical and spectral integration methods for 
 resolvent analysis of channel flows of Newtonian and viscoelastic fluids},
-journal = {Phys. Rev. Fluids},
+journal = {J. Comut. Phys.},
 year    = {2020},
 note    = {submitted}
 }

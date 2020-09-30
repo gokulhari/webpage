@@ -10,7 +10,7 @@ style="z-index: 10000">
 
 /Well-conditioned ultraspherical and spectral integration methods for resolvent analysis of channel flows of Newtonian and viscoelastic fluids/\n
 Hariharan, G., Kumar, S. and Jovanović, M.R.\n
-Phys. Rev. Fluids, 2020\n
+J. Comput. Phys., 2020\n
 [/javascript:toggleBibtex('harkumjovPRF20') \[BibTeX\]]
 ~~~
 {}{raw}
@@ -20,7 +20,7 @@ Phys. Rev. Fluids, 2020\n
 @article{harkumjovPRF20,
   author = {G. Hariharan and S. Kumar and M. R. Jovanovi&cacute;},
   title = {Well-conditioned ultraspherical and spectral integration methods for  resolvent analysis of channel flows of Newtonian and viscoelastic fluids},
-  journal = {Phys. Rev. Fluids},
+  journal = {J. Comput. Phys.},
   year = {2020},
   note = {submitted}
 }
