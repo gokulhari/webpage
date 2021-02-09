@@ -5,23 +5,22 @@
 #include{mj-complete-bib_3.jeminc}
 \n
   
-= Gokul Hariharan, Ph.D. 
+= Gokul Hariharan 
 
 
 
 ~~~
 {}{img_left}{ME.png}{alt text}{200}{200}{}
-*Postdoctoral scholar*\n
-Ming Hseih Department of Electrical and Computer Engineering\n
-University of Southern California\n
+*Graduate Research Assistant*\n
+Computer Science and Engineering\n
+Iowa State University\n
 \n
-Email: [gokulhar@usc.edu gokulhar@usc.edu] \n 
+Email: [gokul@iastate.edu gokul@iastate.edu] \n 
 URL  :   [https://gokulhari.github.io/webpage/ gokulhari.github.io\/webpage\/]
 \n
 ~~~
 
 == About me 
-I have rich experience encompassing fluid mechanics, linear and nonlinear systems theory, control theory, matrix theory, distributed systems analysis, computational fluid dynamics (CFD), discrete element modeling (DEM), principle component analysis (PCA), model reduction, and artificial neural networks (ANN).  I am proficient in finite element, finite volume, finite difference, and spectral methods. I am looking for opportunities to lead, innovate, and manage modeling and simulation in industrial and scientific pursuits. 
+I am currently pursuing a Ph.D in Computer Science with a focus on runtime verification and formal methods for safety critical systems with [https://tichakorn.dev/ Prof. Nok]. This project aims to develop a versatile tool for systems like rockets, autonomous vehicles, and unmanned vehicles to respond effectively and safely to unforeseen circumstances that could lead to a failure or crash.  
 
-
-
+I finished my first Ph.D. in Chemical Engineering at the University of Minnesota, Twin Cities. I have rich experience encompassing fluid mechanics, linear and nonlinear systems theory, control theory, matrix theory, distributed systems analysis, computational fluid dynamics (CFD), discrete element modeling (DEM), principle component analysis (PCA), model reduction, and artificial neural networks (ANN). I am well acquainted with finite element, finite volume, finite difference, and spectral methods. 
