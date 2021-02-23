@@ -6,7 +6,7 @@
 
 = Adjoint Finder
 
-+AdjointFinder+ is a [https://www.wolfram.com/mathematica/ Mathematica] package to compute analytical expressions to adjoint operators and boundary conditions of differential equations with respect to the $L^2 [a, b]$ inner product. I developed and used this package to understand adjoints of descriptor systems in our [/javascript:cite('harkumjovPRF20') paper]. +AdjointFinder+ is likely to ease deriving analytical expressions to adjoints and adjoint boundary conditions without having to manually integrate-by-parts for large systems of differential equations with non-constant coefficients.
++AdjointFinder+ is a [https://www.wolfram.com/mathematica/ Mathematica] package to compute analytical expressions to adjoint operators and boundary conditions of differential equations with respect to the $L^2 [a, b]$ inner product. I developed and used this package to understand adjoints of descriptor systems in our [/javascript:cite('harkumjovJCP20') paper]. +AdjointFinder+ is likely to ease deriving analytical expressions to adjoints and adjoint boundary conditions without having to manually integrate-by-parts for large systems of differential equations with non-constant coefficients.
 
 This package is distributed under terms of GPL-$3$ license.
 
@@ -75,7 +75,7 @@ explicit mention of this website
 [https://gokulhari.github.io/webpage/AdjointFinder.html gokulhari.github.io\/webpage\/AdjointFinder.html] 
 	\n
 	\n
-and of our [/javascript:cite('harkumjovPRF20') paper].
+and of our [/javascript:cite('harkumjovJCP20') paper].
 	\n
 	\n
 ~~~ 
@@ -86,7 +86,7 @@ title   = {Well-conditioned ultraspherical and spectral integration methods for
 resolvent analysis of channel flows of Newtonian and viscoelastic fluids},
 journal = {J. Comut. Phys.},
 year    = {2020},
-note    = {submitted}
+note    = {accepted}
 }
 ~~~
 

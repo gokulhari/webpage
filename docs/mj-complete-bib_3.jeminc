@@ -1,28 +1,28 @@
 
-#item: harkumjovPRF20
+#item: harkumjovJCP20
 ~~~
 {}{raw}
-<div class="bibover noshow" id="bibover_harkumjovPRF20" onmousedown="javascript:lockMouse(event,'harkumjovPRF20')" onmouseup="javascript:unLockMouse(event,'harkumjovPRF20')"
+<div class="bibover noshow" id="bibover_harkumjovJCP20" onmousedown="javascript:lockMouse(event,'harkumjovJCP20')" onmouseup="javascript:unLockMouse(event,'harkumjovJCP20')"
 style="z-index: 10000">
-<div class="cross" style="z-index: 10000"><a href="javascript:closeCite('harkumjovPRF20')">X</a></div>
+<div class="cross" style="z-index: 10000"><a href="javascript:closeCite('harkumjovJCP20')">X</a></div>
 <p>
 ~~~
 
-/Well-conditioned ultraspherical and spectral integration methods for resolvent analysis of channel flows of Newtonian and viscoelastic fluids/\n
+/Well-conditioned ultraspherical and spectral integration methods for \n resolvent analysis of channel flows of Newtonian and viscoelastic fluids/\n
 Hariharan, G., Kumar, S. and Jovanović, M.R.\n
 J. Comput. Phys., 2020\n
-[/javascript:toggleBibtex('harkumjovPRF20') \[BibTeX\]]
+[/javascript:toggleBibtex('harkumjovJCP20') \[BibTeX\]]
 ~~~
 {}{raw}
 </p>
-<div id="bib_harkumjovPRF20" class="bibtex noshow" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
+<div id="bib_harkumjovJCP20" class="bibtex noshow" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
 <pre>
-@article{harkumjovPRF20,
+@article{harkumjovJCP20,
   author = {G. Hariharan and S. Kumar and M. R. Jovanovi&cacute;},
-  title = {Well-conditioned ultraspherical and spectral integration methods for  resolvent analysis of channel flows of Newtonian and viscoelastic fluids},
+  title = {Well-conditioned ultraspherical and spectral integration methods for<br />  resolvent analysis of  channel flows of Newtonian and viscoelastic fluids},
   journal = {J. Comput. Phys.},
   year = {2020},
-  note = {submitted}
+  note = {accepted}
 }
 </pre></div>
 </div>
