@@ -11,25 +11,26 @@
 
 ~~~
 {}{img_left}{ME.png}{alt text}{200}{200}{}
-*Graduate Research Assistant*\n
+*Research Assistant*\n
 #Iowa State University\n
 #\n
-Email: [gokulhariharan1991@gmail.com gokulhariharan1991@gmail.com] \n 
-URL  :   [https://gokulhari.github.io/webpage/ gokulhari.github.io\/webpage\/]
+Email: [gokul@iastate.edu gokul@iastate.edu] \n 
+URL  :   [https://gokulhari.github.io/webpage/ gokulhari.github.io\/webpage\/]\n
+ Github :   [https://github.com/gokulhari github.com\/gokulhari\/]
 #\n
 ~~~
 
 == 
-I would like to join the industry in roles involving automated reasoning, formal methods, computer vision, or hardware/software verification to contribute to safe, competent, and reliable systems. I am currently involved in various collaborative software projects these areas. 
-I am dexterous in many programming languages: Python, C\+\+, OCaml, and Javascript are some of them. 
+I would like to join the industry in roles involving robotics, motion planning, automated reasoning, formal methods, computer vision, or hardware/software verification to contribute to safe, competent, and reliable systems. I am currently involved in collaborative software projects in these areas. 
 
-I also take keen interest in graphics technology (specifically WebGL, Vulkan and CUDA).
+I am dexterous in Python, C\+\+, OCaml, ROS, and Javascript. I also take keen interest in graphics technology (specifically WebGL, Vulkan and CUDA).
 
 
 == About me 
 I am currently pursuing a Ph.D. in Computer Science with a focus on runtime verification and formal methods for safety critical systems with [https://tichakorn.dev/ Prof. Nok]. This project aims to develop a versatile tool for systems like rockets, autonomous vehicles, and unmanned vehicles to respond effectively and safely to unforeseen circumstances that could lead to a failure or crash.  
 
-Previously, I finished my first Ph.D. in Chemical Engineering at the University of Minnesota, Twin Cities (May, 2020). I became an expert in computational fluid dynamics (CFD), linear and nonlinear systems theory, control theory, matrix theory, etc. I stumbled upon automated reasoning and control of safety critical systems during my Postdoc at the University of Southern California, and I decided to pursue a second Ph.D. in formal methods! It has been an exhilarating experience to switch from solving huge differential equations to developing software for safety critical systems.  
+Previously, I finished my first Ph.D. in Chemical Engineering at the University of Minnesota, Twin Cities (May, 2020). The focus areas were computational fluid dynamics (CFD), linear and nonlinear systems, control and matrix theory. I stumbled upon automated reasoning and control of safety critical systems during my Postdoc at the University of Southern California, and I decided to pursue a second Ph.D. in formal methods. Summary: I really like computer science!
 
 == News
-- Paper accepted at the International Workshop on Numerical Software Verification (August, 2022)
+- Paper accepted at [https://www.uantwerpen.be/en/conferences/confest-2023/formats/papers/ FORMATS] (September 2023)
+- Paper accepted at the International Workshop on Numerical Software Verification (August 2022)

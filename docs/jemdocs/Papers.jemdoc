@@ -8,17 +8,20 @@
 = Gokul Hariharan, Ph.D.
 === Ph.D. Thesis 
 G. Hariharan, Transition to elastic turbulence in channel flows, Chemical Engineering and Materials Science, University of Minnesota - Twin Cities, 2020 [/javascript:cite('gokul-phd20') PDF,BIB]. 
+
+=== Refereed proceedings
+G. Hariharan, P. H. Jones, K. Y. Rozier  and T. Wongpiromsarn. Maximum satisfiability of Mission-time Linear Temporal Logic. In Proceedings of the 21th International Conference on Formal Modeling and Analysis of Timed Systems (FORMATS), Belgium, September 2023 (accepted, 43\% of submissions accepted) ([https://github.com/gokulhari/MLTLMaxSAT-FORMATS Artifact]).\n\n
+
+G. Hariharan, B. Kempa, T. Wongpiromsarn, P. H. Jones, and K. Y. Rozier. “MLTL Multi-type (MLTLM): A Logic for Reasoning about Signals of Different Types.” In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV), a workshop of FLoC. Springer, Haifa, Israel, August 11, 2022. ([http://temporallogic.org/research/NSV2022/ PDF], [http://temporallogic.org/research/NSV2022/ Website]) \n\n
+
+G. Hariharan, M. R. Jovanovic, and S. Kumar, [https://doi.org/10.23919/ACC.2018.8431621 Spatio-temporal impulse responses in channel flow of viscoelastic fluids], Proc. American Control Conference, Milwaukee, WI, 2857-2862, 2018. [/javascript:cite('harjovkumACC18') PDF,BIB]\n\n
+A. K. Gupta, G. Hariharan, and A. I. Sivakumar, Pareto control in multi-objective dynamic scheduling using artificial neural network, Int. Conf. Advances in Supply Chain and Manufacturing Management, India, 2011
+
 === Journal Papers
 G. Hariharan, M. R. Jovanovic, and S. Kumar, [https://doi.org/10.1016/j.jnnfm.2018.03.018   Amplification of localized body forces in channel flows of viscoelastic fluids, ] J. Non-Newtonian Fluid Mech., (260) 40-53, 2018.  [/javascript:cite('harjovkumJNNFM18') PDF,BIB]\n\n
 A. K. Gupta, S. K. Singh, S. Reddy, and G. Hariharan, [https://doi.org/10.1016/j.matdes.2011.09.060 Prediction of flow stress in dynamic strain aging regime of austenitic stainless steel 316 using artificial neural network], Mat. And Des. (35) 589-595, 2012\n \n
 G. Hariharan, M. R. Jovanovic, and S. Kumar, [https://doi.org/10.1016/j.jcp.2021.110241 Well-conditioned ultraspherical and spectral integration methods for resolvent analysis of Newtonian and viscoelastic channel flows], J. Comput. Phys. [/javascript:cite('harkumjovJCP21') PDF,BIB] \n\n
 G. Hariharan, M. R. Jovanovic, and S. Kumar, [https://doi.org/10.1016/j.jnnfm.2021.104514 Localized stress amplification in inertialess channel flows of viscoelastic fluids], J. Non Newtonian Fluid Mech. [/javascript:cite('harjovkumJNNFM21') PDF,BIB]
-
-=== Refereed proceedings
-G. Hariharan, B. Kempa, T. Wongpiromsarn, P. H. Jones, and K. Y. Rozier. “MLTL Multi-type (MLTLM): A Logic for Reasoning about Signals of Different Types.” In Proceedings of the 15th International Workshop on Numerical Software Verification (NSV), a workshop of FLoC. Springer, Haifa, Israel, August 11, 2022. ([http://temporallogic.org/research/NSV2022/ PDF], [http://temporallogic.org/research/NSV2022/ Website]) \n\n
-
-G. Hariharan, M. R. Jovanovic, and S. Kumar, [https://doi.org/10.23919/ACC.2018.8431621 Spatio-temporal impulse responses in channel flow of viscoelastic fluids], Proc. American Control Conference, Milwaukee, WI, 2857-2862, 2018. [/javascript:cite('harjovkumACC18') PDF,BIB]\n\n
-A. K. Gupta, G. Hariharan, and A. I. Sivakumar, Pareto control in multi-objective dynamic scheduling using artificial neural network, Int. Conf. Advances in Supply Chain and Manufacturing Management, India, 2011
 
 === Abstracts
 G. Hariharan, M. R. Jovanovic, and S. Kumar, A well-conditioned numerical method for resolvent analysis of viscoelastic channel flows, 72nd annual meeting of the APS Division of Fluid Dynamics, 2019\n\n
