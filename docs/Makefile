@@ -12,7 +12,7 @@ update : $(PHDOCS)
 	@echo ' done.'
 
 %.html : jemdocs/%.jemdoc MENU
-	python2.7 jemdoc.py -c bibover.conf -o $@ $< 
+	python2 jemdoc.py -c bibover.conf -o $@ $< 
 
 .PHONY : clean
 clean :
